@@ -1,0 +1,176 @@
+day1
+
+
+void main(){
+  String sn1 ='parkavi';
+  String sn2 ='Anbu';
+  bool val = (sn1==sn2);
+  print(val);
+}
+
+
+void main(){
+  List marks=[20,22,30,40,41];
+  print(marks[3]);
+  marks.add(42);
+  print("after adding 42: $marks");
+  marks.remove(20);
+  print("after removing 20:$marks");
+}
+
+
+void main(){
+  Map<String,String>capitals ={
+    'USA':'Washington,D.C.',
+    'France': 'Paris',
+    'Japan': 'Tokyo',
+  };
+  print("country-capital Map: $capitals");
+  print("capital of USA:$capitals[USA]}");
+  capitals['germany']= 'Barlin';
+  print("afte addding Germany :$capitals");
+  print("country-capital Paris:");
+  for (var country in capitals.keys){
+    var capital = capitals[country];
+    print("The capital of $country is $capital");
+    }
+  capitals.remove('France');
+  print("after removing france :$capitals" );
+  bool hasJapan = capitals.containsKey('Japan');
+  print("does the maphave japan has key? $hasJapan");
+}
+Output=country-capital Map: {USA: Washington,D.C., France: Paris, Japan: Tokyo}
+capital of USA:{USA: Washington,D.C., France: Paris, Japan: Tokyo}[USA]}
+afte addding Germany :{USA: Washington,D.C., France: Paris, Japan: Tokyo, germany: Barlin}
+country-capital Paris:
+The capital of USA is Washington,D.C.
+The capital of France is Paris
+The capital of Japan is Tokyo
+The capital of germany is Barlin
+after removing france :{USA: Washington,D.C., Japan: Tokyo, germany: Barlin}
+does the maphave japan has key? true
+
+
+
+
+void main() {
+  double num1 = 10.0;
+  double num2 = 5.0;
+  String operation = '+'; 
+  double? result; 
+
+  switch (operation) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      if (num2 != 0) {
+        result = num1 / num2;
+      } else {
+        print('Error: Division by zero is not allowed.');
+      }
+      break;
+    default:
+      print('Invalid operation: "$operation". Supported operations are +, -, *, /.');
+  }
+
+  if (result != null) {
+    print('$num1 $operation $num2 = $result');
+  }
+}
+
+
+void main() {
+ int i;
+  print("rollno.s");
+  for(i=1;i<111;i++)
+  {
+    if(i==50)
+      break;
+      print("$i");
+  }
+}
+
+
+void main() {
+ int i;
+  print("roll no.s");
+  for(i=1;i<111;i++)
+  {
+    if(i%2==0)
+      continue;
+    print("$i");
+  }
+}
+
+
+
+
+void calculateIntrest(double principal,double rate,double time){
+  double intrest = principal*rate*time/100;
+  print("simple Intrest is$intrest");
+
+}
+void main(){
+  double principal = 5000;
+  double time= 3;
+  double rate = 3;
+  calculateIntrest(principal,rate,time);
+}
+
+
+class Rectangle{
+ double?length;
+ double?breadth;
+ double area(){
+  return length!*breadth!;
+
+}
+}
+void main(){
+  Rectangle rectangle=Rectangle();
+  rectangle.length = 10;
+  rectangle.breadth=5;
+  print("area of rrctangle is ${rectangle.area()}.");
+}
+
+
+
+int sumOfEvens(List<int> numbers) {
+  return numbers.where((num) => num % 2 == 0).fold(0, (sum, num) => sum + num);
+}
+
+void main() {
+  List<int> inputNumbers = [1, 2, 3, 4, 5, 6];
+  int result = sumOfEvens(inputNumbers);
+  print("Sum of even numbers: $result");
+}
+
+
+class Book {
+  String name;
+  String author;
+  double price;
+
+  
+  Book(this.name, this.author, this.price);
+
+ 
+  void display() {
+    print('Name: $name');
+    print('Author: $author');
+    print('Price: \$${price.toStringAsFixed(2)}');
+  }
+}
+
+void main() {
+ Book myBook = Book("Flutter in Action", "Eric Windmill", 24.99);
+  myBook.display();
+}
+
